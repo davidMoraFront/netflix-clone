@@ -1,0 +1,14 @@
+@import "swiper/scss";
+@import "swiper/scss/navigation";
+@import "swiper/scss/pagination";
+
+.mySwiper {
+  .swiper-wrapper {
+    display: flex;
+
+    .swiper-slide {
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+}
