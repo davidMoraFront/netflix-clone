@@ -10,15 +10,9 @@
                 }"
                 class="mySwiper"
             >
-                <ng-template swiperSlide>Slide 1</ng-template>
-                <ng-template swiperSlide>Slide 2</ng-template>
-                <ng-template swiperSlide>Slide 3</ng-template>
-                <ng-template swiperSlide>Slide 4</ng-template>
-                <ng-template swiperSlide>Slide 5</ng-template>
-                <ng-template swiperSlide>Slide 6</ng-template>
-                <ng-template swiperSlide>Slide 7</ng-template>
-                <ng-template swiperSlide>Slide 8</ng-template>
-                <ng-template swiperSlide>Slide 9</ng-template>
+                <ng-template swiperSlide *ngFor="let movie of movies?.results">
+                    <img src="https://image.tmdb.org/t/p/w200{{movie?.poster_path}}" alt="{{movie?.title}}">
+                </ng-template>
             </swiper>
             <img />
         </div>

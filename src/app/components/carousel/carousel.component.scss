@@ -3,12 +3,23 @@
 @import "swiper/scss/pagination";
 
 .mySwiper {
+  height: 300px;
+
   .swiper-wrapper {
     display: flex;
 
     .swiper-slide {
       text-align: center;
       cursor: pointer;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      img {
+        width: 200px;
+        height: 300px;
+      }
     }
   }
 }

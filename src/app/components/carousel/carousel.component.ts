@@ -7,8 +7,8 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class CarouselComponent implements OnInit {
-  titleCarousel = "Título";
   @Input() title: string | undefined;
+  @Input() movies: any;
 
   constructor() { }
 
