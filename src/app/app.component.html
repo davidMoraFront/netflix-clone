@@ -1,5 +1,57 @@
-<app-carousel [title]="'Trending'" [movies]="trending"></app-carousel>
-<app-carousel [title]="'Top rated'" [movies]="topRated"></app-carousel>
-<app-carousel [title]="'Now playing'" [movies]="nowPlaying"></app-carousel>
-<app-carousel [title]="'Originals'" [movies]="originals"></app-carousel>
-<app-carousel [title]="'Popular'" [movies]="popular"></app-carousel>
+<div class="container">
+  <div class="header">
+    <div class="header__banner" [ngStyle]="{'background-image' : 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url('+backgroundUrl+')'}">
+      <h2>{{trending?.results[0].title}}</h2>
+      <div class="header__buttons">
+        <button class="play-button">
+          <i class="fa fa-play"></i>
+          <span>Play</span>
+        </button>
+        <button class="more-button">
+          <i class="fa fa-info-circle"></i>
+          <span>More Info</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="header__main" id="stickyHeader" [class.sticky]="sticky" #stickHeader>
+     <div class="header__left">
+       <a routerLink="/">
+         <img src="assets/netflix.svg" alt="logo">
+       </a>
+       <ul>
+         <li class="active"><a href="#">Home</a></li>
+         <li><a href="#">TV Shows</a></li>
+         <li><a href="#">Movies</a></li>
+         <li><a href="#">Latest</a></li>
+         <li><a href="#">My List</a></li>
+       </ul>
+     </div>
+
+     <div class="header__right">
+       <ul>
+        <li><a href="#"><i class="fa fa-search"></i></a></li>
+        <li><a href="#"><i class="fa fa-child"></i></a></li>
+        <li><a href="#"><i class="fa fa-gift"></i></a></li>
+        <li><a href="#"><i class="fa fa-bell"></i></a></li>
+        <li>
+          <!--<img src="https://occ-0-4345-3647.1.nflxso.net/dnm/api/v6/Z-WHgqd_TeJxSuha8aZ5WpyLcX8/AAAABRGTK96GBeqNw5zzYXnoa8oVjSjhuk7SuseuKTmgEKwpcCB59994UWb6wd7d1WONZOuzJwbLNpzG5Okfo4rSDLg.png?r=ee6"
+               alt="avatar">-->
+               <a href="#"><i class="fa fa-user"></i></a>
+        </li>
+      </ul>
+     </div>
+   </div>
+
+  </div>
+
+  <div class="container-carousel">
+    <app-carousel [title]="'Trending'" [movies]="trending"></app-carousel>
+    <app-carousel [title]="'Top rated'" [movies]="topRated"></app-carousel>
+    <app-carousel [title]="'Now playing'" [movies]="nowPlaying"></app-carousel>
+    <app-carousel [title]="'Originals'" [movies]="originals"></app-carousel>
+    <app-carousel [title]="'Popular'" [movies]="popular"></app-carousel>
+  </div>
+</div>
+
+

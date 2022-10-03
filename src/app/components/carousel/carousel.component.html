@@ -1,14 +1,14 @@
-<h1>{{ title }}</h1>
+<h3>{{ title }}</h3>
 <div class="carousel">
     <div class="movie">
         <div class="thumbnail">
             <swiper
-                [slidesPerView]="6"
-                [spaceBetween]="30"
+                [slidesPerView]="8"
+                [spaceBetween]="35"
                 [pagination]="{
                     clickable: true
                 }"
-                class="mySwiper"
+                class="swiper"
             >
                 <ng-template swiperSlide *ngFor="let movie of movies?.results">
                     <img src="https://image.tmdb.org/t/p/w200{{movie?.poster_path}}" alt="{{movie?.title}}">

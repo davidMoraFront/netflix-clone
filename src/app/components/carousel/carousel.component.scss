@@ -2,7 +2,12 @@
 @import "swiper/scss/navigation";
 @import "swiper/scss/pagination";
 
-.mySwiper {
+h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.swiper {
   height: 300px;
 
   .swiper-wrapper {
@@ -18,7 +23,8 @@
 
       img {
         width: 200px;
-        height: 300px;
+        //height: 300px;
+        border-radius: 5px;
       }
     }
   }
